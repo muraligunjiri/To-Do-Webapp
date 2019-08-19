@@ -16,14 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from todo.views import todoview, addTodo, deleteTodo
-from trydjango.views import homepage, aboutpage, contactpage
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('todo/', todoview),
     path('addTodo/', addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
-    path('', homepage),
-    re_path(r'^about?/$', aboutpage),
-    path('contact/', contactpage)
-
+    
 ]
